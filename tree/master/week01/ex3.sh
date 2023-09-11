@@ -11,7 +11,7 @@ ls -ltr > /home/sofia/OS/week01/root_folder/root.txt
 sleep 3 | date
 mkdir /home/sofia/OS/week01/home_folder
 
-#Write list of files of / into root.txt
+#Write list of files of ~ into home.txt
 cd ~
 sleep 3 | date
 ls -ltr > /home/sofia/OS/week01/home_folder/home.txt
