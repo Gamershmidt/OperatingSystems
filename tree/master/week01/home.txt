@@ -1,0 +1,10 @@
+итого 36
+drwxr-xr-x 2 sofia sofia 4096 авг 19 14:54 Шаблоны
+drwxr-xr-x 2 sofia sofia 4096 авг 19 14:54 Общедоступные
+drwxr-xr-x 2 sofia sofia 4096 авг 19 14:54 Музыка
+drwxr-xr-x 2 sofia sofia 4096 авг 19 14:54 Изображения
+drwxr-xr-x 2 sofia sofia 4096 авг 19 14:54 Видео
+drwxr-xr-x 2 sofia sofia 4096 авг 19 16:48 Рабочий стол
+drwxrwxr-x 3 sofia sofia 4096 сен  7 16:39 OS
+drwxr-xr-x 2 sofia sofia 4096 сен 10 14:59 Документы
+drwxr-xr-x 3 sofia sofia 4096 сен 10 15:05 Загрузки
