@@ -1,4 +1,4 @@
-  149  cd /home/sofia/OS/week01
+  149  cd ~/week01
   150  ls -1
   151  ls -1 > test_file_forex2.txt
   152  cat test_file_forex2.txt 
