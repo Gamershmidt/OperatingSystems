@@ -56,11 +56,13 @@ int main() {
 	printf("Mul of int:%d\n", *tmp);
 	tmp = aggregate(int_arr, sizeof(int), 5, &int_min, &maxInt);
 	printf("Max of int:%d\n", *tmp);
+	free(tmp);
 	double* temp = aggregate(dbl_arr, sizeof(double), 5, &base_sum, &additionDouble);
 	printf("Sum of double:%lf\n", *temp);
 	temp = aggregate(dbl_arr, sizeof(double), 5, &base_mul, &multipicaionDouble);
 	printf("Mul of double:%lf\n", *temp);
 	temp = aggregate(dbl_arr, sizeof(double), 5, &double_min , &maxDouble);
 	printf("Max of double:%lf\n", *temp);
+	free(temp);
 	return 0;
 }
