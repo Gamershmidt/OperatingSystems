@@ -117,5 +117,11 @@ int main() {
 	printp_file(bash);
 	printp_file(ex3_1);
 	printp_file(ex3_2);
+	free(bin);
+	free(root);
+	free(home);
+	free(bash);
+	free(ex3_1);
+	free(ex3_2);
 	return 0;
 }
