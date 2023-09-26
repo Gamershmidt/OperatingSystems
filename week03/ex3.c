@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_PATH 2048
+#define MAX_FNAME 64
+#define MAX_SIZE 1024
 struct File;
 
 struct Directory {
@@ -9,14 +11,14 @@ struct Directory {
 	unsigned char nf;
 	unsigned char nd;
 	char path[MAX_PATH];
-	struct File *files[64];
-	struct Directory* directories[512];
+	struct File *files[MAX_FNAME];
+	struct Directory* directories[MAX_SIZE];
 };
 struct File {
 	int id;
-	char name[64];
+	char name[MAX_FNAME];
 	int size;
-	char data[1024];
+	char data[MAX_SIZE];
 	struct Directory directory;
 };
 
