@@ -12,10 +12,10 @@ int main() {
     
     
     *p = *q;
-    *(p + 1) = *q;
+    *(p + 1) = *q; 
     *(p + 2) = 2 * (*q);
 
-    fprintf(stdout, "%p %p %p\n", p, (p + 1), (p + 2));
+    fprintf(stdout, "P0: %p P1: %p P2: %p\n", p, (p + 1), (p + 2));
     fprintf(stdout, "%d", const_tri(p, 6));
 
     free(p); // Don't forget to free the allocated memory when done
