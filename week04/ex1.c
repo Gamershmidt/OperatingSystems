@@ -8,6 +8,10 @@ int main()
 {
 	pid_t child1, child2;
 	child1 = fork();
+	if (child1 == -1) {
+	    perror("fork");
+	    exit(1);
+	}
 	clock_t begin1 = clock();
 	if (child1 == 0) {
 	    printf("Child-process ID: %d, Parent ID: %d\n", getpid(), getppid());
@@ -16,6 +20,10 @@ int main()
 	    exit(0);
 	} else {
 	    child2 = fork();
+	    if (child1 == -1) {
+		perror("fork");
+	        exit(1);
+	    }
 	    clock_t begin2 = clock();
 
 	    if (child2 == 0) {
