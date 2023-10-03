@@ -37,3 +37,4 @@ gnome-terminal-─┬─bash─┬─bash─┬─ex3─┬─ex3─┬─ex3─
                 ├─{gnome-terminal-}
                 ├─{gnome-terminal-}
                 └─{gnome-terminal-}
+The number of processes growth f(n) = 2^n because fork() doubles the each process. Therefore the tree of processes in this case is a binary tree.
