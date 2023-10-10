@@ -1,1 +1,3 @@
-Each subscriber needs its own named pipe to receive messages independently because named pipes (FIFOs) are unidirectional communication channels. In a publisher-subscriber model, the publisher writes messages to the named pipes, and each subscriber reads from its specific named pipe. Creating separate named pipes for each subscriber ensures that messages are not mixed up between subscribers and that each subscriber can read messages intended for it.
+Each subscriber needs its own named pipe to receive messages independently because named pipes (FIFOs) are unidirectional communication channels.
+In a publisher-subscriber model, the publisher writes messages to the named pipes, and each subscriber reads from its specific named pipe.
+Creating separate named pipes for each subscriber ensures that messages are not mixed up between subscribers and that each subscriber can read messages intended for it.
