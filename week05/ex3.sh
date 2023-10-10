@@ -13,7 +13,6 @@ for m in "${m_values[@]}"; do
     
 done
 
-(./ex3 $n 100) >> ex3_res.txt
+./ex3 $n 10
 
 rm -f ex3  
-
