@@ -1,0 +1,23 @@
+The `ex4.c` program was executed with a fixed value of n=10,000,000 and varying thread counts (m) of 1, 2, 4, 10, and 100.
+
+1. Single Thread (m=1):
+   - Execution Time: 2,378s
+   - It had the slowest execution time.
+
+2. Two Threads (m=2):
+   - Execution Time: 1,316s
+   - Execution time decreased significantly.
+
+3. Four Threads (m=4):
+   - Execution Time:  0.924s
+   - Further improvement in execution time was observed.
+
+4. Ten Threads (m=10):
+   - Execution Time: 1.516s
+   - Execution time continued increased.
+
+5. One Hundred Threads (m=100):
+   - Execution Time: 1.749s
+   - Execution time increased significantly compared with m = 10
+
+For ex3 execution time was improving significantly up to a certain m, but then continued to increase. In ex4, execution time improved but after a certain m it became worse.
