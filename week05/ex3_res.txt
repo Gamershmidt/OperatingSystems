@@ -1,0 +1,6 @@
+0m2,364s
+0m1,505s
+0m0,859s
+0m0,551s
+0m0,471s
+Total primes in the range [0, 10000000) = 664579
