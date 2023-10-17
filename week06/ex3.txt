@@ -1,0 +1,20 @@
+result of SJF:
+
+"
+Average results for this run:
+  avg_wt=4.857143
+  avg_tat=9.142858
+"
+
+result of FCFS:
+
+"
+Average results for this run:
+  avg_wt=8.000000
+  avg_tat=12.285714
+"
+    SJF typically prioritizes shorter jobs, leading to a lower average waiting time compared to FCFS. In SJF, shorter jobs get executed earlier, which helps reduce the waiting time for other jobs.
+
+    In the provided results, the average waiting time for SJF (4.857143) is significantly lower than that for FCFS (8.000000), indicating that SJF is more efficient in reducing job waiting times.
+
+    Similarly, the average turnaround time for SJF (9.142858) is also lower than that for FCFS (12.285714). Turnaround time is the time taken from the arrival of a job to its completion. A lower turnaround time is desirable, as it indicates that jobs are completed more quickly.
