@@ -1,0 +1,31 @@
+results of RR :
+"
+Average results for this run:
+  avg_wt=9.000000
+  avg_tat=13.285714
+"
+
+result of SJF:
+
+"
+Average results for this run:
+  avg_wt=4.857143
+  avg_tat=9.142858
+"
+
+result of FCFS:
+
+"
+Average results for this run:
+  avg_wt=8.000000
+  avg_tat=12.285714
+"
+
+SJF (Shortest Job First) has the lowest average waiting time (avg_wt) and average turnaround time (avg_tat) among the three algorithms.
+This suggests that, in general, SJF is the most efficient in terms of minimizing the time jobs spend waiting and completing.
+
+RR (Round-Robin) with a quantum of 3 has a higher average waiting time and average turnaround time compared to SJF. 
+Round-Robin is a preemptive scheduling algorithm that aims to provide fair execution but may not be as efficient as SJF in reducing waiting times.
+
+FCFS (First-Come, First-Served) has the highest average waiting time and average turnaround time,
+indicating that it's the least efficient among the three algorithms. FCFS can result in poor performance, especially if longer jobs arrive before shorter ones.
