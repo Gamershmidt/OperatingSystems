@@ -76,20 +76,11 @@ void read_file(FILE* file) {
             data[data_size].qtime = qtm;
             data_size++;
 
-            //ps[process_id] = getpid();
             
         } else {
             printf("Error: Maximum number of processes reached.\n");
         }
     }
-    printf("%d", data_size);
-//    for (int i = 0; i < data_size; i++) {
-//        printf("\n%d\n", data[i].at);        
-//        data[i].qtime = 0;
-//    }
-//    for(int i = 0; i < PS_MAX; i++) {
-//        queue[i] = 0;
-//    }
     fclose(file);
 }
 
@@ -214,10 +205,9 @@ void schedule_handler(int signum) {
         if (data[running_process].burst <= 0) {
             printf("Scheduler: Terminating Process %d (Remaining Time: 0)\n", running_process);
             terminate(ps[running_process]);
-            data[running_process].ct = total_time;
-            data[running_process].tat = data[running_process].ct - data[running_process].at;
+            data[running_process].tat = total_time - data[running_process].at;
             data[running_process].wt = data[running_process].tat - data[running_process].bt;
-            data[running_process].rt = data[running_process].ct - data[running_process].at - data[running_process].bt;
+            data[running_process].ct = total_time;
             running_process = -1;
         }
         if (data[running_process].qtime == 0) schedule_handler(signum);   
