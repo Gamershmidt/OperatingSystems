@@ -1,0 +1,8 @@
+Change the macro TRI BASE to a small number like 100 and run
+the scheduler again. Compare your results before and after the
+change?
+Answer:
+Change the arrival time of all processes to make all of them zero,
+then run the scheduler again. In which order will processes be
+executed?
+Answer:
