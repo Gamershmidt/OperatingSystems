@@ -1,8 +1,9 @@
 Change the macro TRI BASE to a small number like 100 and run
 the scheduler again. Compare your results before and after the
 change?
-Answer:
+Answer: The program prints more triangular numbers but the result(at, wt, rt... etc) of execution remain the same. 
+That means that the time of execution depends on algorithm not on the numbers.
 Change the arrival time of all processes to make all of them zero,
 then run the scheduler again. In which order will processes be
 executed?
-Answer:
+Answer: in the same order as idx.
