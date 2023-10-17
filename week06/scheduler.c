@@ -42,15 +42,17 @@ void read_file(FILE* file) {
     int process_id, arrival_time, burst_time;
     data_size = 0; 
     //fscanf(file, "%d %d %d", &process_id, &arrival_time, &burst_time)
-    while (fscanf(file, "%d %d %d", &process_id, &arrival_time, &burst_time) == 3) {
+    while (fscanf(file, "%d", &process_id) != EOF) {
+        fscanf(file, "%d", &arrival_time);
+        fscanf(file, "%d",&burst_time);
         if (data_size < PS_MAX) {
             data[data_size].idx = process_id;
             data[data_size].at = arrival_time;
             data[data_size].bt = burst_time;
             data[data_size].rt = burst_time; 
-            data[data_size].burst = burst_time; 
+            data[data_size].burst = burst_time;
             data_size++;
-            //ps[process_id] = getpid();
+
             
         } else {
             printf("Error: Maximum number of processes reached.\n");
