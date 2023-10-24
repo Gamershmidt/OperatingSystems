@@ -1,0 +1,3 @@
+First fit throughput: 3103.039153 queries/second
+Best fit throughput: 2850.913969 queries/second
+Worst fit throughput: 2966.064730 queries/second
