@@ -44,6 +44,7 @@ void allocate_FirstFit(unsigned int adrs, int size){
                 break;
             }
         }
+        
         if (found) {
             for (int j = 0; j < size; j++) {
                 memory[i + j] = adrs;
@@ -90,6 +91,11 @@ void clear(unsigned int adrs) {
         }
     }
 }
+void show() {
+    for (int i = 0; i < MEMORY_SIZE; i++) {
+        printf("%d ", memory[i]);
+    }printf("\n");
+}
 int main() {
     for (int i = 0; i < MEMORY_SIZE; i++) {
         memory[i] = 0;
@@ -114,10 +120,13 @@ int main() {
         unsigned int adrs;
         int size;
 
-        if (sscanf(line, "%s %u %d", command, &adrs, &size) == 3) {
+        if (sscanf(line, "%s %u %d", command, &adrs, &size) == 3 || sscanf(line, "%s %u", command, &adrs) == 2) {
+        
             if (strcmp(command, "allocate") == 0) {
                 allocate_FirstFit(adrs, size);
+                
             } else if (strcmp(command, "clear") == 0) {
+            	
                 clear(adrs);
             } else {
                 printf("Invalid command: %s\n", command);
@@ -153,7 +162,7 @@ int main() {
         unsigned int adrs;
         int size;
 
-        if (sscanf(line, "%s %u %d", command, &adrs, &size) == 3) {
+        if (sscanf(line, "%s %u %d", command, &adrs, &size) == 3 || sscanf(line, "%s %u", command, &adrs) == 2) {
             if (strcmp(command, "allocate") == 0) {
                 allocate_BestFit(adrs, size);
             } else if (strcmp(command, "clear") == 0) {
@@ -191,7 +200,7 @@ int main() {
         unsigned int adrs;
         int size;
 
-        if (sscanf(line, "%s %u %d", command, &adrs, &size) == 3) {
+        if (sscanf(line, "%s %u %d", command, &adrs, &size) == 3 || sscanf(line, "%s %u", command, &adrs) == 2) {
             if (strcmp(command, "allocate") == 0) {
                 allocate_WorstFit(adrs, size);
             } else if (strcmp(command, "clear") == 0) {
