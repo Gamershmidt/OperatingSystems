@@ -6,37 +6,6 @@
 #include <sys/mman.h>
 
 int main() {
-    /*
-
-    int random_fd = open("/dev/random", O_RDONLY);
-    if (random_fd == -1) {
-        perror("Error opening /dev/random");
-        return 1;
-    }
-
-    char c;
-    for (int i = 0; i < 4; ++i) {
-        int counter = 0;
-        while(1){
-            ssize_t n = read(random_fd, &c, 1);
-            if (n == -1) {
-                perror("Error reading from /dev/random");
-                close(random_fd);
-                return 1;
-            }
-            if (isprint(c)) {
-                fputc(c, file);
-                counter++;
-            }
-            if(counter == 1024) {
-                fputc('\n', file);
-                break;
-            }
-        }
-
-    }
-
-    close(random_fd);*/
     FILE *file = fopen("text.txt", "w");
     if (file == NULL) {
         perror("Error creating text.txt");
@@ -61,8 +30,8 @@ int main() {
         return 1;
     }
 
-    //off_t file_size = 500 * 1024 * 1024;
-    off_t file_size = 4 * 1024 * 1024;
+    off_t file_size = 500 * 1024 * 1024;
+
     if (lseek(text_fd, file_size - 1, SEEK_SET) == -1) {
         perror("Error extending text.txt");
         close(random_fd);
