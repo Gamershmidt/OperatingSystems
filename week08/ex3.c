@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <sys/resource.h>
-#define MEMORY_ALLOCATION_SIZE (2000 * 1024 * 1024) 
+#define MEMORY_ALLOCATION_SIZE (10 * 1024 * 1024) 
 
 int main() {
     struct rusage usage;
