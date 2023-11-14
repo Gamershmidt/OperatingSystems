@@ -7,6 +7,7 @@
 #include <dirent.h>
 #include <sys/stat.h>
 char *path;
+
 void find_all_hlinks(const char* source) {
     struct stat source_stat;
     if (lstat(source, &source_stat) == -1) {
@@ -21,6 +22,7 @@ void find_all_hlinks(const char* source) {
     }
 
     struct dirent *entry;
+    int kolvo = 0;
     while ((entry = readdir(dir)) != NULL) {
         char file_path[PATH_MAX];
         snprintf(file_path, sizeof(file_path), "%s/%s", path, entry->d_name);
@@ -37,7 +39,7 @@ void find_all_hlinks(const char* source) {
                 perror("realpath");
                 continue;
             }
-
+            kolvo++;
             printf("Inode: %ld, Path: %s, content: \n", file_stat.st_ino, abs_path);
             FILE* file = fopen(entry->d_name, "r");
             while (!feof(file)) {
@@ -47,7 +49,7 @@ void find_all_hlinks(const char* source) {
             fclose(file);
         }
     }
-
+    printf("Number of hard links: %d\n\n", kolvo);
     closedir(dir);
 }
 void unlink_all(const char* source) {
@@ -152,6 +154,8 @@ int main(int argc, char *argv[]) {
     }
 
     unlink_all("/tmp/myfile1.txt");
+    printf("Stat info\n");
+    find_all_hlinks("/tmp/myfile1.txt");
     return EXIT_SUCCESS;
 
 }
