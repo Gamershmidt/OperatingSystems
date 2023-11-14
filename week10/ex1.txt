@@ -1,3 +1,8 @@
 Did the monitor.c program reported an event for myfile11.txt?
-
+Yes, he changed the contents of file because it was created with use of hard link
 Did the monitor.c program reported an event for myfile13.txt?
+No, it did not reported any event after creation, because there was no direct access to it
+Check the number of hard links and explain the difference.
+The number of hard links decreased:
+  before it was 3, at the end it became 2.
+Explanation: it was 3, but some files were deleted, it became 2 because myfile13.txt was created with use of symlink, with the same i-node.
