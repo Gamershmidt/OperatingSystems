@@ -21,3 +21,5 @@ lib64
 lost+found
 file1
 
+The same script was executed, however filestructure is different, almost all files and folders changed the placement.
+This means that file allocation is not the same foor two executions.
